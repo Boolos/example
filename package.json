@@ -1,0 +1,29 @@
+{
+  "name": "env-commander",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/src/index.js",
+  "scripts": {
+    "uninstall": "npm run clean && rm -rf node_modules",
+    "prebuild": "echo Building...",
+    "build": "tsc",
+    "postbuild": "echo Build succeeded!",
+    "clean": "rm -rf bin",
+    "test": "ava",
+    "test:watch": "ava --watch",
+    "start": "node bin/src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "8.0.50",
+    "ava": "0.23.0",
+    "typescript": "2.5.3"
+  },
+  "dependencies": {},
+  "ava": {
+    "files": [
+      "bin/tests/**/*.js"
+    ]
+  }
+}
